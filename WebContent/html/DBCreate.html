@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html data-ng-app="createDBApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Comptible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DBCreate</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../styles/DBCreate.css"  />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+	crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+	integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX"
+	crossorigin="anonymous">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../js/DBCreate.js"></script>
+</head>
+<body data-ng-controller="createDBAppCtrl">
+
+	<div class="container">
+
+		<div class="row" style="margin-top: 20px">
+			<div
+				class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+				<form role="form">
+					<fieldset>
+						<h3 style="color:white">Database Creation</h3>
+						<hr class="colorgraph">
+						<div class="form-group">
+							<input type="text" name="db_name" id="db_name"
+								data-ng-model="dbName" class="form-control input-lg"
+								placeholder="Database Name">
+						</div>
+						<div class="form-group">
+							<input type="text" name="db_username" id="db_username"
+								data-ng-model="dbUsername" class="form-control input-lg"
+								placeholder="Username">
+						</div>
+						<div class="form-group">
+							<input type="password" name="db_password" id="password"
+								data-ng-model="dbPassword" class="form-control input-lg"
+								placeholder="Password">
+						</div>
+
+
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<button data-ng-click="createDB()"
+									class="btn btn-lg btn-success btn-block">Create</button>
+							</div>
+						</div>
+						<br /> <br />
+						<h3 style="color:white">Database Migration</h3>
+						<hr class="colorgraph">
+
+						<!-- 						<span class="file-input btn btn-primary btn-file"> -->
+						<!-- 							Browse&hellip; <input type="file" multiple> -->
+						<!-- 						</span> <br> -->
+
+
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<strong><label style="color:white" for="uploadFile" class="control-lable">Upload
+										File:</label></strong> <input type="file" file-model="myFile" name="file"
+									class="form-control" id="fileId" placeholder="Upload File" /><br>
+								<button data-ng-click="uploadFile()"
+									class="btn btn-primary center-block">Migrate</button>
+									
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+							<button data-ng-click="viewDetails()"
+									class="btn btn-primary center-block">View
+									Details</button>
+							</div>
+						</div>
+			</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+
+	</div>
+</body>
+</html>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html data-ng-app="viewDetailsApp">
+<head>
+<meta charset="UTF-8">
+<title>View Details</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+	crossorigin="anonymous">
+	<!-- Bootstrap CSS -->
+        <link href="../styles/Customer.css" rel="stylesheet" />
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+	integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX"
+	crossorigin="anonymous">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../js/viewDetails.js"></script>
+</head>
+<body data-ng-controller="viewDetailsAppCtrl">
+<br />
+	<div class="container">
+		<div class="row">
+		<h2 align="center" style="color:white">Customer Details</h2>
+		</div>				
+		</div>
+						<br /> <br />
+						<div class="container table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th style="color:white">Customer Name</th>
+									<th style="color:white">Phone</th>
+									<th style="color:white">Address Line 1</th>
+									<th style="color:white">Address Line 2</th>
+									<th style="color:white">City</th>
+									<th style="color:white">State</th>
+									<th style="color:white">Country</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								
+								<tr align="left" data-ng-repeat="customer in customers">
+									<!-- 										{{customer}} -->
+									<td style="color:white">{{customer.customerName}}</td>
+									<td style="color:white">{{customer.phone}}</td>
+									<td style="color:white">{{customer.addressLine1}}</td>
+									<td style="color:white">{{customer.addressLine2}}</td>
+									<td style="color:white">{{customer.city}}</td>
+									<td style="color:white">{{customer.state}}</td>
+									<td style="color:white">{{customer.country}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+		
+</body>
+</html>
